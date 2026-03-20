@@ -20,3 +20,4 @@ discard_no_commit	1.354211	21.2	discard	add global gradient norm clipping (clip=
 discard_no_commit	1.357661	21.2	discard	increase adam beta1 0.8→0.9: more momentum, worse by 0.021
 discard_no_commit	1.354515	21.2	discard	increase adam beta2 0.95→0.99: worse by 0.018
 discard_no_commit	1.344361	21.2	discard	FINAL_LR_FRAC 0.0→0.1: ends warmdown at 10% LR, slightly worse
+682e930	1.301629	21.2	keep	raise logit cap 15→30: sharper output probabilities
