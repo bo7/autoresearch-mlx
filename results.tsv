@@ -14,3 +14,4 @@ discard_no_commit	1.420993	21.2	discard	reduce HEAD_DIM 128→64 (4 heads vs 2):
 bb8a2c5	1.344138	21.2	keep	replace ReSquared activation with SiLU
 discard_no_commit	1.539146	21.2	discard	warmup 0→0.05: no improvement, worse by 0.195
 discard_no_commit	1.355603	21.5	discard	SwiGLU MLP (8/3 expansion) vs SiLU (4x): worse
+368c89d	1.336749	21.2	keep	switch window pattern SSSL→LLLL with SiLU: all full-context attention (depth=8)
