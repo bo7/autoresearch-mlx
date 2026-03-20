@@ -206,7 +206,7 @@ class GPT(nn.Module):
         x = norm(x)
 
         logits = self.lm_head(x).astype(mx.float32)
-        logits = 15.0 * mx.tanh(logits / 15.0)
+        logits = 30.0 * mx.tanh(logits / 30.0)
 
         if targets is None:
             return logits
@@ -237,6 +237,7 @@ class AdamW:
                     "betas": adam_betas,
                     "eps": 1e-10,
                     "weight_decay": weight_decay,
+                    "use_ns": True,
                 }
             elif "wte" in path:
                 self.param_config[path] = {
@@ -306,6 +307,10 @@ class AdamW:
         beta1, beta2 = config["betas"]
         eps = config["eps"]
         weight_decay = config["weight_decay"]
+        # Apply Newton-Schulz preprocessing for block matrix params (Muon)
+        if (config.get("use_ns", False) and grad_f32.ndim == 2
+                and min(grad_f32.shape) >= 8):
+            grad_f32 = ns_newton_schulz(grad_f32)
 
         if path not in self.adam_state:
             self.adam_state[path] = {
@@ -349,6 +354,26 @@ class AdamW:
         for state in self.adam_state.values():
             arrays.extend([state["m"], state["v"]])
         return arrays
+
+
+
+def ns_newton_schulz(G, steps=5):
+    # 5-step Newton-Schulz ortho for Muon gradient preprocessing
+    a, b, c = (3.4445, -4.7750, 2.0315)
+    norm_G = mx.linalg.norm(G)
+    X = G / (norm_G + 1e-7)
+    m, n = X.shape
+    if m > n:
+        X = X.T
+        transposed = True
+    else:
+        transposed = False
+    for _ in range(steps):
+        A = X @ X.T
+        X = a * X + b * (A @ X) + c * (A @ (A @ X))
+    if transposed:
+        X = X.T
+    return X * mx.sqrt(mx.array(float(max(m, n)), dtype=mx.float32))
 
 
 # ---------------------------------------------------------------------------
