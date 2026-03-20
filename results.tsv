@@ -13,3 +13,4 @@ discard_no_commit	1.379792	21.3	discard	increase depth 8→10 aspect_ratio 32→
 discard_no_commit	1.420993	21.2	discard	reduce HEAD_DIM 128→64 (4 heads vs 2): worse
 bb8a2c5	1.344138	21.2	keep	replace ReSquared activation with SiLU
 discard_no_commit	1.539146	21.2	discard	warmup 0→0.05: no improvement, worse by 0.195
+discard_no_commit	1.355603	21.5	discard	SwiGLU MLP (8/3 expansion) vs SiLU (4x): worse
