@@ -356,7 +356,7 @@ class AdamW:
 # ---------------------------------------------------------------------------
 
 # Model architecture
-ASPECT_RATIO = 64
+ASPECT_RATIO = 42
 HEAD_DIM = 128
 WINDOW_PATTERN = "LLLL"
 
@@ -373,7 +373,7 @@ WARMDOWN_RATIO = 0.5
 FINAL_LR_FRAC = 0.0
 
 # Model size
-DEPTH = 4
+DEPTH = 6
 DEVICE_BATCH_SIZE = 8
 FINAL_EVAL_BATCH_SIZE = 256
 STARTUP_EXCLUDE_STEPS = 1
