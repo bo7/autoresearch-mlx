@@ -18,3 +18,4 @@ discard_no_commit	1.355603	21.5	discard	SwiGLU MLP (8/3 expansion) vs SiLU (4x):
 discard_no_commit	1.370325	21.2	discard	shorter warmdown 0.5→0.25: worse by 0.034
 discard_no_commit	1.354211	21.2	discard	add global gradient norm clipping (clip=1.0): worse by 0.017
 discard_no_commit	1.357661	21.2	discard	increase adam beta1 0.8→0.9: more momentum, worse by 0.021
+discard_no_commit	1.354515	21.2	discard	increase adam beta2 0.95→0.99: worse by 0.018
