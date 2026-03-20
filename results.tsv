@@ -22,3 +22,4 @@ discard_no_commit	1.354515	21.2	discard	increase adam beta2 0.95→0.99: worse b
 discard_no_commit	1.344361	21.2	discard	FINAL_LR_FRAC 0.0→0.1: ends warmdown at 10% LR, slightly worse
 682e930	1.301629	21.2	keep	raise logit cap 15→30: sharper output probabilities
 discard_no_commit	1.305735	21.2	discard	raise logit cap 30→50: worse, not sharper
+discard_no_commit	1.323893	21.2	discard	reduce NS steps 5→3: more training steps but worse orthogonalization
