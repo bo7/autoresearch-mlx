@@ -12,3 +12,4 @@ d293f30	1.350571	21.2	keep	increase depth from 6 to 8, aspect_ratio 42→32 (mod
 discard_no_commit	1.379792	21.3	discard	increase depth 8→10 aspect_ratio 32→24 (model_dim=256 same): worse
 discard_no_commit	1.420993	21.2	discard	reduce HEAD_DIM 128→64 (4 heads vs 2): worse
 bb8a2c5	1.344138	21.2	keep	replace ReSquared activation with SiLU
+discard_no_commit	1.539146	21.2	discard	warmup 0→0.05: no improvement, worse by 0.195
