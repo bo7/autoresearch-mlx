@@ -7,3 +7,4 @@ c67ad2a	2.695369	26.9	discard	lower weight decay to 0.1
 0d78a02	1.374976	21.2	keep	halve batch size to 2^15: eliminates grad accum, 2x training steps
 2cdafe4	1.374400	21.2	keep	halve batch size to 2^14: device_batch=8, no grad accum, 2x training steps
 2e36b58	1.355125	21.2	keep	switch window pattern SSSL→LLLL: all full-context attention depth=4
+3d6b053	1.354792	21.2	keep	increase depth from 4 to 6, keep same width (model_dim=256, aspect_ratio=42)
