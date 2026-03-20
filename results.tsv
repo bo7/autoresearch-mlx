@@ -9,3 +9,4 @@ c67ad2a	2.695369	26.9	discard	lower weight decay to 0.1
 2e36b58	1.355125	21.2	keep	switch window pattern SSSL→LLLL: all full-context attention depth=4
 3d6b053	1.354792	21.2	keep	increase depth from 4 to 6, keep same width (model_dim=256, aspect_ratio=42)
 d293f30	1.350571	21.2	keep	increase depth from 6 to 8, aspect_ratio 42→32 (model_dim=256 unchanged)
+discard_no_commit	1.379792	21.3	discard	increase depth 8→10 aspect_ratio 32→24 (model_dim=256 same): worse
