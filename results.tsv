@@ -41,3 +41,4 @@ discard_no_commit	1.602432	21.2	discard	label smoothing 0.1: metric mismatch—m
 discard_no_commit	1.300095	21.2	discard	SCALAR_LR 0.5→1.0: faster x0_lambdas adaptation, worse by 0.017 (1.3001 vs 1.2834)
 discard_no_commit	1.314612	23.2	discard	parallel attn+MLP (PaLM-style): shared norm, attn+mlp computed from same nx → worse by 0.031
 discard_no_commit	1.319420	21.2	discard	Muon matrix betas (0.8,0.95)→(0.95,0.95): more momentum for NS params, worse by 0.036
+discard_no_commit	1.338338	21.2	discard	MQA n_kv_head=2→1: worse by 0.055 (1.3383 vs 1.2834)
