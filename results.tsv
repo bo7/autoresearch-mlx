@@ -32,3 +32,4 @@ discard_no_commit	1.287478	21.2	discard	x0_lambdas init 0.5→0.7: worse than 0.
 discard_no_commit	1.311365	21.2	discard	cosine warmdown instead of linear: worse by 0.028 (1.3114 vs 1.2834)
 discard_no_commit	1.363531	21.2	discard	halve batch size 2^13→2^12 device_batch=2: more steps but worse regularization
 discard_no_commit	1.313378	21.2	discard	ve_gate full residual (256 channels) vs restricted (32): worse by 0.030
+discard_no_commit	1.308173	21.2	discard	longer warmdown 0.5→0.6: LR decay starts earlier, worse by 0.025 (1.3082 vs 1.2834)
