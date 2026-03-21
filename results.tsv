@@ -35,3 +35,4 @@ discard_no_commit	1.313378	21.2	discard	ve_gate full residual (256 channels) vs 
 discard_no_commit	1.308173	21.2	discard	longer warmdown 0.5→0.6: LR decay starts earlier, worse by 0.025 (1.3082 vs 1.2834)
 discard_no_commit	1.314780	21.2	discard	increase MATRIX_LR 0.04→0.05: worse by 0.031
 discard_no_commit	1.303304	21.2	discard	x0_lambdas beta1 0.96→0.8: faster adapt of skip gates, worse by 0.020
+discard_no_commit	1.339226	21.2	discard	RoPE base 10000→500000: worse by 0.056 (1.3392 vs 1.2834)
