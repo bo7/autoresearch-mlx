@@ -27,3 +27,4 @@ discard_no_commit	1.302573	21.2	discard	NS steps 5→7: more orthogonalization, 
 1981f4c	1.291539	21.2	keep	zero weight_decay for NS (Muon) block matrix params: WD 0.2→0.0, NS orthogonalization is self-regularizing
 discard_no_commit	1.295977	21.2	discard	increase embedding LR 0.6→1.0: higher effective LR for wte+value_embeds, slightly worse
 51c49f3	1.287602	21.2	keep	increase x0_lambdas init 0.1→0.3: stronger input skip-connection signal per layer
+fd5cbf8	1.283364	21.2	keep	increase x0_lambdas init 0.3→0.5: stronger input skip-connection signal
