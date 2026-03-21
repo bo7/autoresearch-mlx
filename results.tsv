@@ -37,3 +37,4 @@ discard_no_commit	1.314780	21.2	discard	increase MATRIX_LR 0.04→0.05: worse by
 discard_no_commit	1.303304	21.2	discard	x0_lambdas beta1 0.96→0.8: faster adapt of skip gates, worse by 0.020
 discard_no_commit	1.339226	21.2	discard	RoPE base 10000→500000: worse by 0.056 (1.3392 vs 1.2834)
 discard_no_commit	1.342389	20.7	discard	reduce MLP expansion 4x→3x: fewer params+faster steps but worse (1.3424 vs 1.2834)
+discard_no_commit	1.602432	21.2	discard	label smoothing 0.1: metric mismatch—model optimizes smoothed loss but BPB evaluates raw CE, worse by 0.319
