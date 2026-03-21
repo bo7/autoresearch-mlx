@@ -40,3 +40,4 @@ discard_no_commit	1.342389	20.7	discard	reduce MLP expansion 4x→3x: fewer para
 discard_no_commit	1.602432	21.2	discard	label smoothing 0.1: metric mismatch—model optimizes smoothed loss but BPB evaluates raw CE, worse by 0.319
 discard_no_commit	1.300095	21.2	discard	SCALAR_LR 0.5→1.0: faster x0_lambdas adaptation, worse by 0.017 (1.3001 vs 1.2834)
 discard_no_commit	1.314612	23.2	discard	parallel attn+MLP (PaLM-style): shared norm, attn+mlp computed from same nx → worse by 0.031
+discard_no_commit	1.319420	21.2	discard	Muon matrix betas (0.8,0.95)→(0.95,0.95): more momentum for NS params, worse by 0.036
