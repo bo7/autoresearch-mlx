@@ -43,3 +43,4 @@ discard_no_commit	1.314612	23.2	discard	parallel attn+MLP (PaLM-style): shared n
 discard_no_commit	1.319420	21.2	discard	Muon matrix betas (0.8,0.95)→(0.95,0.95): more momentum for NS params, worse by 0.036
 discard_no_commit	1.338338	21.2	discard	MQA n_kv_head=2→1: worse by 0.055 (1.3383 vs 1.2834)
 discard_no_commit	1.307796	21.2	discard	ve_gate_channels 32→64: richer VE gate input, worse by 0.024 (1.3078 vs 1.2834)
+discard_no_commit	3.491892	21.2	discard	adam beta1 0.8→0.85: much worse (3.49 vs 1.2834)
